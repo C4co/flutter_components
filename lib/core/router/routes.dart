@@ -6,7 +6,8 @@ import '/views/views.dart';
   routes: <AutoRoute>[
     AutoRoute(page: HomePage, initial: true, path: '/'),
     AutoRoute(page: BottomPage, path: '/buttons'),
-    AutoRoute(page: AppButtonPage, path: '/app-buttons'),
+    AutoRoute(page: AppButtonPage, path: '/custom-buttons'),
+    AutoRoute(page: InputPage, path: '/inputs'),
   ],
 )
 class $AppRouter {}

@@ -40,6 +40,12 @@ class AppRouter extends _i2.RootStackRouter {
         child: const _i1.AppButtonPage(),
       );
     },
+    InputRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.InputPage(),
+      );
+    },
   };
 
   @override
@@ -54,7 +60,11 @@ class AppRouter extends _i2.RootStackRouter {
         ),
         _i2.RouteConfig(
           AppButtonRoute.name,
-          path: '/app-buttons',
+          path: '/custom-buttons',
+        ),
+        _i2.RouteConfig(
+          InputRoute.name,
+          path: '/inputs',
         ),
       ];
 }
@@ -89,8 +99,20 @@ class AppButtonRoute extends _i2.PageRouteInfo<void> {
   const AppButtonRoute()
       : super(
           AppButtonRoute.name,
-          path: '/app-buttons',
+          path: '/custom-buttons',
         );
 
   static const String name = 'AppButtonRoute';
+}
+
+/// generated route for
+/// [_i1.InputPage]
+class InputRoute extends _i2.PageRouteInfo<void> {
+  const InputRoute()
+      : super(
+          InputRoute.name,
+          path: '/inputs',
+        );
+
+  static const String name = 'InputRoute';
 }

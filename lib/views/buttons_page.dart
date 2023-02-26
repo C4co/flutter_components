@@ -23,13 +23,13 @@ class _BottomPageState extends State<BottomPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Button(
-                label: 'Hidden',
+                label: 'Normal buttons!',
                 hidden: true,
               ),
               const SizedBox(height: 16),
               Button(
                 onPressed: () {},
-                label: 'Normal button',
+                label: 'Button',
                 loading: false,
               ),
               const SizedBox(height: 16),

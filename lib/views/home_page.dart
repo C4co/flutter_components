@@ -25,14 +25,16 @@ class _HomePageState extends State<HomePage> {
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Inputs'),
-            onTap: () {},
+            title: const Text('Custom buttons'),
+            onTap: () {
+              context.router.pushNamed('/custom-buttons');
+            },
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('App Buttons'),
+            title: const Text('Inputs'),
             onTap: () {
-              context.router.pushNamed('/app-buttons');
+              context.router.pushNamed('/inputs');
             },
           ),
         ],
