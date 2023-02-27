@@ -37,6 +37,13 @@ class _HomePageState extends State<HomePage> {
               context.router.pushNamed('/inputs');
             },
           ),
+          const Divider(height: 1),
+          ListTile(
+            title: const Text('Cards'),
+            onTap: () {
+              context.router.pushNamed('/cards');
+            },
+          ),
         ],
       ),
     );

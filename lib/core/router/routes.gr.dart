@@ -46,6 +46,12 @@ class AppRouter extends _i2.RootStackRouter {
         child: const _i1.InputPage(),
       );
     },
+    CardsRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.CardsPage(),
+      );
+    },
   };
 
   @override
@@ -65,6 +71,10 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(
           InputRoute.name,
           path: '/inputs',
+        ),
+        _i2.RouteConfig(
+          CardsRoute.name,
+          path: '/cards',
         ),
       ];
 }
@@ -115,4 +125,16 @@ class InputRoute extends _i2.PageRouteInfo<void> {
         );
 
   static const String name = 'InputRoute';
+}
+
+/// generated route for
+/// [_i1.CardsPage]
+class CardsRoute extends _i2.PageRouteInfo<void> {
+  const CardsRoute()
+      : super(
+          CardsRoute.name,
+          path: '/cards',
+        );
+
+  static const String name = 'CardsRoute';
 }
