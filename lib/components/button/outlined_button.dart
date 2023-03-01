@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatefulWidget {
+class AppOutlinedButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
   final VoidCallback? onLongPress;
@@ -8,7 +8,7 @@ class Button extends StatefulWidget {
   final bool? hidden;
   final bool? loading;
 
-  const Button({
+  const AppOutlinedButton({
     super.key,
     required this.label,
     this.onPressed,
@@ -19,18 +19,13 @@ class Button extends StatefulWidget {
   });
 
   @override
-  State<Button> createState() => _ButtonState();
-}
-
-class _ButtonState extends State<Button> {
-  @override
   Widget build(BuildContext context) {
-    var width = widget.fullWidth! ? double.infinity : null;
+    var width = fullWidth! ? double.infinity : null;
 
-    if (widget.loading!) {
+    if (loading!) {
       return SizedBox(
         width: width,
-        child: const FilledButton(
+        child: const OutlinedButton(
           onPressed: null,
           child: SizedBox(
             width: 16,
@@ -41,17 +36,17 @@ class _ButtonState extends State<Button> {
       );
     }
 
-    if (widget.hidden!) {
+    if (hidden!) {
       return const SizedBox.shrink();
     }
 
-    return FilledButton(
-      onPressed: widget.onPressed,
-      onLongPress: widget.onLongPress,
+    return OutlinedButton(
+      onPressed: onPressed,
+      onLongPress: onLongPress,
       child: SizedBox(
         width: width,
         child: Text(
-          widget.label,
+          label,
           textAlign: TextAlign.center,
         ),
       ),

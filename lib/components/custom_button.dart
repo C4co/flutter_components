@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatefulWidget {
-  const CustomButton({super.key});
+class AppCustomButton extends StatefulWidget {
+  const AppCustomButton({super.key});
 
   @override
-  State<CustomButton> createState() => _CustomButtonState();
+  State<AppCustomButton> createState() => _AppCustomButtonState();
 }
 
-class _CustomButtonState extends State<CustomButton> {
+class _AppCustomButtonState extends State<AppCustomButton> {
   @override
   Widget build(BuildContext context) {
     return Material(
