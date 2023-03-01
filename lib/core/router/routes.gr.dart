@@ -52,6 +52,18 @@ class AppRouter extends _i2.RootStackRouter {
         child: const _i1.CardsPage(),
       );
     },
+    DialogRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.DialogPage(),
+      );
+    },
+    SnackbarRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.SnackbarPage(),
+      );
+    },
   };
 
   @override
@@ -75,6 +87,14 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(
           CardsRoute.name,
           path: '/cards',
+        ),
+        _i2.RouteConfig(
+          DialogRoute.name,
+          path: '/dialog',
+        ),
+        _i2.RouteConfig(
+          SnackbarRoute.name,
+          path: '/snackbar',
         ),
       ];
 }
@@ -137,4 +157,28 @@ class CardsRoute extends _i2.PageRouteInfo<void> {
         );
 
   static const String name = 'CardsRoute';
+}
+
+/// generated route for
+/// [_i1.DialogPage]
+class DialogRoute extends _i2.PageRouteInfo<void> {
+  const DialogRoute()
+      : super(
+          DialogRoute.name,
+          path: '/dialog',
+        );
+
+  static const String name = 'DialogRoute';
+}
+
+/// generated route for
+/// [_i1.SnackbarPage]
+class SnackbarRoute extends _i2.PageRouteInfo<void> {
+  const SnackbarRoute()
+      : super(
+          SnackbarRoute.name,
+          path: '/snackbar',
+        );
+
+  static const String name = 'SnackbarRoute';
 }
