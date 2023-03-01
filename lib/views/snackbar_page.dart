@@ -30,9 +30,10 @@ class _SnackbarPageState extends State<SnackbarPage> {
               label: 'Snackbar error',
               onPressed: () {
                 AppSnackBar.show(
-                    message: 'Snackbar meessage',
-                    context: context,
-                    error: true);
+                  message: 'Snackbar meessage',
+                  context: context,
+                  error: true,
+                );
               },
             ),
           ],
