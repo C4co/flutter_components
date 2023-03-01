@@ -21,7 +21,7 @@ class _AppButtonPageState extends State<AppButtonPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              CustomButton(),
+              AppCustomButton(),
             ],
           ),
         ),

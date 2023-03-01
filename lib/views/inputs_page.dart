@@ -13,7 +13,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hello World App'),
+        title: const Text('Input'),
       ),
       body: const Padding(
         padding: EdgeInsets.all(20),

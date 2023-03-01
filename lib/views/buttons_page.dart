@@ -22,31 +22,64 @@ class _BottomPageState extends State<BottomPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Button(
-                label: 'Normal buttons!',
-                hidden: true,
+              Wrap(
+                spacing: 10,
+                children: [
+                  AppFilledButton(
+                    onPressed: () {},
+                    label: 'Button',
+                    loading: false,
+                  ),
+                  AppOutlinedButton(
+                    onPressed: () {},
+                    label: 'Button',
+                    loading: false,
+                  ),
+                ],
               ),
               const SizedBox(height: 16),
-              Button(
-                onPressed: () {},
-                label: 'Button',
-                loading: false,
+              const Wrap(
+                spacing: 10,
+                children: [
+                  AppFilledButton(
+                    label: 'Loading...',
+                    loading: true,
+                  ),
+                  AppOutlinedButton(
+                    label: 'Loading...',
+                    loading: true,
+                  ),
+                ],
               ),
               const SizedBox(height: 16),
-              const Button(
-                label: 'Loading...',
-                loading: true,
+              Wrap(
+                spacing: 10,
+                children: [
+                  AppFilledButton(
+                    onPressed: () {},
+                    label: 'Full width',
+                    fullWidth: true,
+                  ),
+                  AppOutlinedButton(
+                    onPressed: () {},
+                    label: 'Full width',
+                    fullWidth: true,
+                  ),
+                ],
               ),
               const SizedBox(height: 16),
-              Button(
-                onPressed: () {},
-                label: 'Full width',
-                fullWidth: true,
-              ),
-              const SizedBox(height: 16),
-              const Button(
-                label: 'Disabled',
-                onPressed: null,
+              const Wrap(
+                spacing: 10,
+                children: [
+                  AppFilledButton(
+                    label: 'Disabled',
+                    onPressed: null,
+                  ),
+                  AppOutlinedButton(
+                    label: 'Disabled',
+                    onPressed: null,
+                  ),
+                ],
               ),
             ],
           ),
