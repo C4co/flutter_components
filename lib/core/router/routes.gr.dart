@@ -64,6 +64,12 @@ class AppRouter extends _i2.RootStackRouter {
         child: const _i1.SnackbarPage(),
       );
     },
+    SelectRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.SelectPage(),
+      );
+    },
   };
 
   @override
@@ -95,6 +101,10 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(
           SnackbarRoute.name,
           path: '/snackbar',
+        ),
+        _i2.RouteConfig(
+          SelectRoute.name,
+          path: '/select',
         ),
       ];
 }
@@ -181,4 +191,16 @@ class SnackbarRoute extends _i2.PageRouteInfo<void> {
         );
 
   static const String name = 'SnackbarRoute';
+}
+
+/// generated route for
+/// [_i1.SelectPage]
+class SelectRoute extends _i2.PageRouteInfo<void> {
+  const SelectRoute()
+      : super(
+          SelectRoute.name,
+          path: '/select',
+        );
+
+  static const String name = 'SelectRoute';
 }

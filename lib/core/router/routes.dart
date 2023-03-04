@@ -11,6 +11,7 @@ import '/views/views.dart';
     AutoRoute(page: CardsPage, path: '/cards'),
     AutoRoute(page: DialogPage, path: '/dialog'),
     AutoRoute(page: SnackbarPage, path: '/snackbar'),
+    AutoRoute(page: SelectPage, path: '/select'),
   ],
 )
 class $AppRouter {}

@@ -5,3 +5,4 @@ export 'inputs_page.dart';
 export 'cards_page.dart';
 export 'dialog_page.dart';
 export 'snackbar_page.dart';
+export 'select_page.dart';
