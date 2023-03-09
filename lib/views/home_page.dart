@@ -72,6 +72,20 @@ class _HomePageState extends State<HomePage> {
               context.router.pushNamed('/sliver');
             },
           ),
+          const Divider(height: 1),
+          ListTile(
+            title: const Text('Datepicker'),
+            onTap: () {
+              context.router.pushNamed('/datepicker');
+            },
+          ),
+          const Divider(height: 1),
+          ListTile(
+            title: const Text('Timepicker'),
+            onTap: () {
+              context.router.pushNamed('/timepicker');
+            },
+          ),
         ],
       ),
     );

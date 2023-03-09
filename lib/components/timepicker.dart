@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+
+class TimePicker extends StatefulWidget {
+  final String? label;
+  final String? hint;
+  final Function(TimeOfDay) onChanged;
+
+  const TimePicker({
+    super.key,
+    this.label,
+    this.hint,
+    required this.onChanged,
+  });
+
+  @override
+  State<TimePicker> createState() => _TimePickerState();
+}
+
+class _TimePickerState extends State<TimePicker> {
+  final inputController = TextEditingController();
+  TimeOfDay initialTime = TimeOfDay.now();
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: inputController,
+      readOnly: true,
+      onTap: () {
+        showTimePicker(
+          context: context,
+          initialTime: initialTime,
+        ).then((TimeOfDay? value) {
+          if (value != null) {
+            final String hour = value.hour.toString().padLeft(2, '0');
+            final String minute = value.minute.toString().padLeft(2, '0');
+            final String time = '$hour:$minute';
+
+            setState(() {
+              initialTime = value;
+            });
+
+            inputController.text = time;
+
+            widget.onChanged(value);
+          }
+        });
+      },
+      decoration: InputDecoration(
+        prefixIcon: const Icon(Icons.access_time),
+        contentPadding: const EdgeInsets.all(15),
+        labelText: widget.label,
+        hintText: widget.hint,
+        border: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+        ),
+      ),
+      keyboardType: TextInputType.datetime,
+    );
+  }
+}

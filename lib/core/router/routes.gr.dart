@@ -76,6 +76,18 @@ class AppRouter extends _i2.RootStackRouter {
         child: const _i1.SliverPage(),
       );
     },
+    DatepickerRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.DatepickerPage(),
+      );
+    },
+    TimepickerRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.TimepickerPage(),
+      );
+    },
   };
 
   @override
@@ -115,6 +127,14 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(
           SliverRoute.name,
           path: '/sliver',
+        ),
+        _i2.RouteConfig(
+          DatepickerRoute.name,
+          path: '/datepicker',
+        ),
+        _i2.RouteConfig(
+          TimepickerRoute.name,
+          path: '/timepicker',
         ),
       ];
 }
@@ -225,4 +245,28 @@ class SliverRoute extends _i2.PageRouteInfo<void> {
         );
 
   static const String name = 'SliverRoute';
+}
+
+/// generated route for
+/// [_i1.DatepickerPage]
+class DatepickerRoute extends _i2.PageRouteInfo<void> {
+  const DatepickerRoute()
+      : super(
+          DatepickerRoute.name,
+          path: '/datepicker',
+        );
+
+  static const String name = 'DatepickerRoute';
+}
+
+/// generated route for
+/// [_i1.TimepickerPage]
+class TimepickerRoute extends _i2.PageRouteInfo<void> {
+  const TimepickerRoute()
+      : super(
+          TimepickerRoute.name,
+          path: '/timepicker',
+        );
+
+  static const String name = 'TimepickerRoute';
 }
