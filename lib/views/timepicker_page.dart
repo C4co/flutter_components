@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_components/services/local_notification.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import '/components/components.dart';
 
 class TimepickerPage extends StatefulWidget {
@@ -9,6 +11,8 @@ class TimepickerPage extends StatefulWidget {
 }
 
 class _TimepickerPageState extends State<TimepickerPage> {
+  DateTime? scheduleTime;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,12 +22,59 @@ class _TimepickerPageState extends State<TimepickerPage> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Center(
-          child: TimePicker(
-            label: 'Time',
-            hint: 'Select time',
-            onChanged: (TimeOfDay value) {
-              print(value);
-            },
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TimePicker(
+                label: 'Time',
+                hint: 'Select time',
+                onChanged: (TimeOfDay value) {
+                  DateTime time = DateTime(
+                    DateTime.now().year,
+                    DateTime.now().month,
+                    DateTime.now().day,
+                    value.hour,
+                    value.minute,
+                  );
+                  setState(() {
+                    scheduleTime = time;
+                  });
+                },
+              ),
+              const SizedBox(height: 20),
+              if (scheduleTime != null)
+                Text(
+                  scheduleTime.toString(),
+                ),
+              const SizedBox(height: 20),
+              AppFilledButton(
+                label: 'Schedule',
+                onPressed: () {
+                  NotificationService().scheduleNotification(
+                    id: 0,
+                    title: 'Scheduled Notification',
+                    body: 'This is a scheduled notification',
+                    scheduledNotificationDateTime: scheduleTime!,
+                    payLoad: 'Hello world',
+                  );
+                },
+              ),
+              // add a divider
+              const Divider(),
+              // list pending notifications
+              AppFilledButton(
+                label: 'List Pending Notifications',
+                onPressed: () async {
+                  List<PendingNotificationRequest> pendingNotifications =
+                      await NotificationService()
+                          .notificationsPlugin
+                          .pendingNotificationRequests();
+
+                  // pendingNotifications.clear();
+                  print(pendingNotifications);
+                },
+              ),
+            ],
           ),
         ),
       ),
