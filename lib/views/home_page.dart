@@ -65,6 +65,13 @@ class _HomePageState extends State<HomePage> {
               context.router.pushNamed('/select');
             },
           ),
+          const Divider(height: 1),
+          ListTile(
+            title: const Text('Sliver'),
+            onTap: () {
+              context.router.pushNamed('/sliver');
+            },
+          ),
         ],
       ),
     );

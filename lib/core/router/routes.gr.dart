@@ -70,6 +70,12 @@ class AppRouter extends _i2.RootStackRouter {
         child: const _i1.SelectPage(),
       );
     },
+    SliverRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.SliverPage(),
+      );
+    },
   };
 
   @override
@@ -105,6 +111,10 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(
           SelectRoute.name,
           path: '/select',
+        ),
+        _i2.RouteConfig(
+          SliverRoute.name,
+          path: '/sliver',
         ),
       ];
 }
@@ -203,4 +213,16 @@ class SelectRoute extends _i2.PageRouteInfo<void> {
         );
 
   static const String name = 'SelectRoute';
+}
+
+/// generated route for
+/// [_i1.SliverPage]
+class SliverRoute extends _i2.PageRouteInfo<void> {
+  const SliverRoute()
+      : super(
+          SliverRoute.name,
+          path: '/sliver',
+        );
+
+  static const String name = 'SliverRoute';
 }

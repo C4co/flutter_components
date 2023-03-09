@@ -12,6 +12,7 @@ import '/views/views.dart';
     AutoRoute(page: DialogPage, path: '/dialog'),
     AutoRoute(page: SnackbarPage, path: '/snackbar'),
     AutoRoute(page: SelectPage, path: '/select'),
+    AutoRoute(page: SliverPage, path: '/sliver'),
   ],
 )
 class $AppRouter {}
