@@ -23,7 +23,7 @@ class _AppCardState extends State<AppCard> {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: Theme.of(context).colorScheme.primaryContainer,
+      color: Theme.of(context).colorScheme.surfaceVariant,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[

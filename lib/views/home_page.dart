@@ -86,6 +86,13 @@ class _HomePageState extends State<HomePage> {
               context.router.pushNamed('/timepicker');
             },
           ),
+          const Divider(height: 1),
+          ListTile(
+            title: const Text('Expansion Card'),
+            onTap: () {
+              context.router.pushNamed('/expansion-card');
+            },
+          ),
         ],
       ),
     );

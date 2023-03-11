@@ -88,6 +88,12 @@ class AppRouter extends _i2.RootStackRouter {
         child: const _i1.TimepickerPage(),
       );
     },
+    ExpansionCardRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.ExpansionCardPage(),
+      );
+    },
   };
 
   @override
@@ -135,6 +141,10 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(
           TimepickerRoute.name,
           path: '/timepicker',
+        ),
+        _i2.RouteConfig(
+          ExpansionCardRoute.name,
+          path: '/expansion-card',
         ),
       ];
 }
@@ -269,4 +279,16 @@ class TimepickerRoute extends _i2.PageRouteInfo<void> {
         );
 
   static const String name = 'TimepickerRoute';
+}
+
+/// generated route for
+/// [_i1.ExpansionCardPage]
+class ExpansionCardRoute extends _i2.PageRouteInfo<void> {
+  const ExpansionCardRoute()
+      : super(
+          ExpansionCardRoute.name,
+          path: '/expansion-card',
+        );
+
+  static const String name = 'ExpansionCardRoute';
 }
