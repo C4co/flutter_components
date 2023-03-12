@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('Flutter Components'),
       ),
       body: ListView(
         children: [
@@ -28,13 +28,6 @@ class _HomePageState extends State<HomePage> {
             title: const Text('Custom buttons'),
             onTap: () {
               context.router.pushNamed('/custom-buttons');
-            },
-          ),
-          const Divider(height: 1),
-          ListTile(
-            title: const Text('Inputs'),
-            onTap: () {
-              context.router.pushNamed('/inputs');
             },
           ),
           const Divider(height: 1),
@@ -63,13 +56,6 @@ class _HomePageState extends State<HomePage> {
             title: const Text('Select'),
             onTap: () {
               context.router.pushNamed('/select');
-            },
-          ),
-          const Divider(height: 1),
-          ListTile(
-            title: const Text('Sliver'),
-            onTap: () {
-              context.router.pushNamed('/sliver');
             },
           ),
           const Divider(height: 1),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_components/components/components.dart';
 
-class AppButtonPage extends StatefulWidget {
-  const AppButtonPage({super.key});
+class ButtonPage extends StatefulWidget {
+  const ButtonPage({super.key});
 
   @override
-  State<AppButtonPage> createState() => _AppButtonPageState();
+  State<ButtonPage> createState() => _ButtonPageState();
 }
 
-class _AppButtonPageState extends State<AppButtonPage> {
+class _ButtonPageState extends State<ButtonPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

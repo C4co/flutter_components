@@ -31,19 +31,13 @@ class AppRouter extends _i2.RootStackRouter {
     BottomRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i1.BottomPage(),
+        child: const _i1.CustomBottomPage(),
       );
     },
     AppButtonRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i1.AppButtonPage(),
-      );
-    },
-    InputRoute.name: (routeData) {
-      return _i2.MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const _i1.InputPage(),
+        child: const _i1.ButtonPage(),
       );
     },
     CardsRoute.name: (routeData) {
@@ -68,12 +62,6 @@ class AppRouter extends _i2.RootStackRouter {
       return _i2.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.SelectPage(),
-      );
-    },
-    SliverRoute.name: (routeData) {
-      return _i2.MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const _i1.SliverPage(),
       );
     },
     DatepickerRoute.name: (routeData) {
@@ -111,10 +99,6 @@ class AppRouter extends _i2.RootStackRouter {
           path: '/custom-buttons',
         ),
         _i2.RouteConfig(
-          InputRoute.name,
-          path: '/inputs',
-        ),
-        _i2.RouteConfig(
           CardsRoute.name,
           path: '/cards',
         ),
@@ -129,10 +113,6 @@ class AppRouter extends _i2.RootStackRouter {
         _i2.RouteConfig(
           SelectRoute.name,
           path: '/select',
-        ),
-        _i2.RouteConfig(
-          SliverRoute.name,
-          path: '/sliver',
         ),
         _i2.RouteConfig(
           DatepickerRoute.name,
@@ -162,7 +142,7 @@ class HomeRoute extends _i2.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i1.BottomPage]
+/// [_i1.CustomBottomPage]
 class BottomRoute extends _i2.PageRouteInfo<void> {
   const BottomRoute()
       : super(
@@ -174,7 +154,7 @@ class BottomRoute extends _i2.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i1.AppButtonPage]
+/// [_i1.ButtonPage]
 class AppButtonRoute extends _i2.PageRouteInfo<void> {
   const AppButtonRoute()
       : super(
@@ -183,18 +163,6 @@ class AppButtonRoute extends _i2.PageRouteInfo<void> {
         );
 
   static const String name = 'AppButtonRoute';
-}
-
-/// generated route for
-/// [_i1.InputPage]
-class InputRoute extends _i2.PageRouteInfo<void> {
-  const InputRoute()
-      : super(
-          InputRoute.name,
-          path: '/inputs',
-        );
-
-  static const String name = 'InputRoute';
 }
 
 /// generated route for
@@ -243,18 +211,6 @@ class SelectRoute extends _i2.PageRouteInfo<void> {
         );
 
   static const String name = 'SelectRoute';
-}
-
-/// generated route for
-/// [_i1.SliverPage]
-class SliverRoute extends _i2.PageRouteInfo<void> {
-  const SliverRoute()
-      : super(
-          SliverRoute.name,
-          path: '/sliver',
-        );
-
-  static const String name = 'SliverRoute';
 }
 
 /// generated route for

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import '/components/components.dart';
 
-class BottomPage extends StatefulWidget {
-  const BottomPage({super.key});
+class CustomBottomPage extends StatefulWidget {
+  const CustomBottomPage({super.key});
 
   @override
-  State<BottomPage> createState() => _BottomPageState();
+  State<CustomBottomPage> createState() => _CustomBottomPageState();
 }
 
-class _BottomPageState extends State<BottomPage> {
+class _CustomBottomPageState extends State<CustomBottomPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

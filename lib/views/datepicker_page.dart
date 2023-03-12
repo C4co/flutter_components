@@ -22,7 +22,7 @@ class _DatepickerPageState extends State<DatepickerPage> {
             label: 'Date',
             hint: 'Select a date',
             onChanged: (DateTime? date) {
-              print(date);
+              debugPrint(date.toString());
             },
           ),
         ),
