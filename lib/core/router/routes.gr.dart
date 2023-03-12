@@ -31,7 +31,7 @@ class AppRouter extends _i2.RootStackRouter {
     BottomRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i1.CustomBottomPage(),
+        child: const _i1.ButtonPage(),
       );
     },
     AppButtonRoute.name: (routeData) {
@@ -142,7 +142,7 @@ class HomeRoute extends _i2.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i1.CustomBottomPage]
+/// [_i1.ButtonPage]
 class BottomRoute extends _i2.PageRouteInfo<void> {
   const BottomRoute()
       : super(

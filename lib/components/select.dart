@@ -4,12 +4,16 @@ class AppSelect extends StatefulWidget {
   final void Function(dynamic) onChange;
   final Map<String, dynamic> items;
   final String label;
+  final String? Function(String?)? validator;
+  final String placeholder;
 
   const AppSelect({
     super.key,
     required this.onChange,
     required this.items,
     required this.label,
+    this.validator,
+    this.placeholder = 'Placegolder',
   });
 
   @override
@@ -19,25 +23,39 @@ class AppSelect extends StatefulWidget {
 class _AppSelectState extends State<AppSelect> {
   @override
   Widget build(BuildContext context) {
-    String firstValue = widget.items.keys.first;
-
     var outlineStyle = InputDecoration(
       contentPadding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
-      border: const OutlineInputBorder(),
+      border: const OutlineInputBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
+          bottomLeft: Radius.circular(10),
+          bottomRight: Radius.circular(10),
+        ),
+      ),
       labelText: widget.label,
+      hintText: widget.placeholder,
+      prefixIcon: Icon(
+        Icons.flag,
+        color: Theme.of(context).colorScheme.onSurfaceVariant,
+      ),
     );
 
     return DropdownButtonFormField(
-      value: firstValue,
+      validator: widget.validator,
       icon: const Icon(Icons.expand_more),
+      dropdownColor: Theme.of(context).colorScheme.surfaceVariant,
+      elevation: 0,
       iconSize: 24,
+      borderRadius: BorderRadius.circular(20),
       decoration: outlineStyle,
       items: widget.items.keys.map((String value) {
         return DropdownMenuItem(
           value: value,
           child: Text(
             value,
-            style: const TextStyle(
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onSurfaceVariant,
               fontWeight: FontWeight.normal,
             ),
           ),

@@ -16,7 +16,7 @@ class _DatepickerPageState extends State<DatepickerPage> {
         title: const Text('Datepicker'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(20),
         child: Center(
           child: AppDatePicker(
             label: 'Date',

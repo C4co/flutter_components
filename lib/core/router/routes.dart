@@ -5,8 +5,7 @@ import '/views/views.dart';
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
     AutoRoute(page: HomePage, initial: true, path: '/'),
-    AutoRoute(page: CustomBottomPage, path: '/buttons'),
-    AutoRoute(page: ButtonPage, path: '/custom-buttons'),
+    AutoRoute(page: ButtonPage, path: '/buttons'),
     AutoRoute(page: CardsPage, path: '/cards'),
     AutoRoute(page: DialogPage, path: '/dialog'),
     AutoRoute(page: SnackbarPage, path: '/snackbar'),

@@ -25,13 +25,6 @@ class _HomePageState extends State<HomePage> {
           ),
           const Divider(height: 1),
           ListTile(
-            title: const Text('Custom buttons'),
-            onTap: () {
-              context.router.pushNamed('/custom-buttons');
-            },
-          ),
-          const Divider(height: 1),
-          ListTile(
             title: const Text('Cards'),
             onTap: () {
               context.router.pushNamed('/cards');

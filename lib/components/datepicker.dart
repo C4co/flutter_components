@@ -53,7 +53,7 @@ class _AppDatePickerState extends State<AppDatePicker> {
         labelText: widget.label,
         hintText: widget.hint,
         border: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
+          borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
       ),
       keyboardType: TextInputType.datetime,

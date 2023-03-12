@@ -1,6 +1,5 @@
-export 'custom_buttons_page.dart';
+export 'buttons_page.dart';
 export 'home_page.dart';
-export 'button_page.dart';
 export 'cards_page.dart';
 export 'dialog_page.dart';
 export 'snackbar_page.dart';

@@ -9,7 +9,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(useMaterial3: true, brightness: Brightness.light),
+      theme: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.light,
+        colorSchemeSeed: Colors.blue,
+      ),
       title: 'Flutter Components',
       debugShowCheckedModeBanner: false,
       routerDelegate: _appRouter.delegate(),

@@ -16,11 +16,11 @@ class _TimepickerPageState extends State<TimepickerPage> {
         title: const Text('Time Picker'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(20),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               TimePicker(
                 label: 'Time Picker',
                 onChanged: (time) {

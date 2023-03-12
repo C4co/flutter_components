@@ -5,6 +5,7 @@ class AppCard extends StatefulWidget {
   final IconData? icon;
   final String? title;
   final String? subtitle;
+  final Widget? header;
 
   const AppCard({
     super.key,
@@ -12,6 +13,7 @@ class AppCard extends StatefulWidget {
     this.icon,
     this.title,
     this.subtitle,
+    this.header,
   });
 
   @override
@@ -23,16 +25,18 @@ class _AppCardState extends State<AppCard> {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
+      clipBehavior: Clip.hardEdge,
       color: Theme.of(context).colorScheme.surfaceVariant,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
+          if (widget.header != null) widget.header!,
           ListTile(
             leading: widget.icon == null
                 ? null
                 : Icon(
                     widget.icon,
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
             title: widget.title == null
                 ? null
